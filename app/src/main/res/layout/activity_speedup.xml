@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/colorBackground">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:id="@+id/speedupScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Temporary boosters"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="1 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="1 hour"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/satoshi1temptext"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+
+                <Button
+                    android:id="@+id/satoshi1temp"
+                    android:textSize="16sp"
+                    android:text="50 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="2 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="1 hour"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/satoshi2temptext"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+
+                <Button
+                    android:id="@+id/satoshi2temp"
+                    android:textSize="16sp"
+                    android:text="110 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="3 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="1 hour"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/satoshi3temptext"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+
+                <Button
+                    android:id="@+id/satoshi3temp"
+                    android:textSize="16sp"
+                    android:text="170 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="4 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_centerInParent="true"
+                    android:text="1 hour"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/satoshi4temptext"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+
+                <Button
+                    android:id="@+id/satoshi4temp"
+                    android:textSize="16sp"
+                    android:text="230 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/cpu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Permanent boosters"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="3 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi3text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi3booster"
+                    android:textSize="16sp"
+                    android:text="5000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="5 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi5text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi5booster"
+                    android:textSize="16sp"
+                    android:text="6500 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="7 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi7text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi7booster"
+                    android:textSize="16sp"
+                    android:text="9000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="9 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi9text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi10booster"
+                    android:textSize="16sp"
+                    android:text="12000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="52dp">
+
+                <ImageView
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:src="@drawable/pool"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:text="Mining pool"
+                    android:textSize="20sp"
+                    android:textColor="@android:color/white"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="30 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi30text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi30pool"
+                    android:textSize="16sp"
+                    android:text="40000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="50 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi50text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi50pool"
+                    android:textSize="16sp"
+                    android:text="55000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="70 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi70text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi70pool"
+                    android:textSize="16sp"
+                    android:text="80000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="100 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi100text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi100pool"
+                    android:textSize="16sp"
+                    android:text="130000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="150 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi150text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi150pool"
+                    android:textSize="16sp"
+                    android:text="170000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:paddingStart="24dp"
+                android:paddingLeft="24dp"
+                android:paddingEnd="24dp"
+                android:paddingRight="24dp"
+                android:background="@color/colorPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:text="200 Satoshi/min"
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/satoshi200text"
+                    android:layout_centerInParent="true"
+                    android:text=""
+                    android:gravity="center_vertical|start"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <Button
+                    android:id="@+id/satoshi200pool"
+                    android:textSize="16sp"
+                    android:text="230000 S"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:elevation="8dp"
+                    android:background="@drawable/button_main"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="100dp"
+                    android:layout_height="32dp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include layout="@layout/banner" />
+    </LinearLayout>
+</FrameLayout>

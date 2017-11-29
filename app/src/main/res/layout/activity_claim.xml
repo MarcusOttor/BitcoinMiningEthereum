@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textGetSatoshi"
+                    android:textAllCaps="true"
+                    fontPath="fonts/Roboto-Bold.ttf"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@android:color/white"
+                    android:layout_alignParentTop="true"
+                    android:padding="8dp"
+                    android:gravity="center"
+                    android:text="Get 1000 Satoshi for free every 30 minutes"
+                    android:textSize="22sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <com.github.lzyzsd.circleprogress.ArcProgress
+                    android:layout_marginTop="8dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/textGetSatoshi"
+                    android:id="@+id/arcProgress"
+                    android:layout_width="240dp"
+                    app:arc_suffix_text="60"
+                    app:arc_suffix_text_size="22sp"
+                    app:arc_text_size="56sp"
+                    app:arc_progress="25"
+                    app:arc_max="30"
+                    app:arc_stroke_width="16dp"
+                    app:arc_finished_color="@color/colorAccent"
+                    app:arc_unfinished_color="@color/colorPrimary"
+                    app:arc_bottom_text="Mining"
+                    app:arc_bottom_text_size="28sp"
+                    app:arc_text_color="@color/colorAccent"
+                    android:layout_height="240dp" />
+
+                <Button
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@id/arcProgress"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:elevation="8dp"
+                    android:alpha="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBackground"
+                    android:text="Claim"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_main"
+                    android:id="@+id/claim"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginTop="16dp"
+                    android:layout_below="@id/claim"
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:elevation="8dp"
+                    android:alpha="1"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBackground"
+                    android:text="More Satoshi"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/button_main"
+                    android:id="@+id/moreSatoshi"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include layout="@layout/banner" />
+    </LinearLayout>
+</FrameLayout>

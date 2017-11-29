@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bitcoin mining - free BTC</string>
+    <string name="metrica">41e30281-a7bd-4035-8c45-33ca46d754f3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+</resources>

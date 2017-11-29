@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/colorBackground"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar_main" />
+
+    <ScrollView
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:background="@color/colorBackground">
+
+                <android.support.v7.widget.CardView
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_marginTop="16dp"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/dropDownCurrencies"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/currencyName"
+                                android:paddingLeft="8dp"
+                                android:paddingStart="8dp"
+                                android:text="Bitcoin"
+                                android:textSize="20sp"
+                                android:textColor="@color/colorAccent"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                            <ImageView
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginRight="8dp"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentEnd="true"
+                                android:src="@drawable/ic_arrow_drop_down_black_48dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/satoshiCountText"
+                            android:inputType="numberDecimal"
+                            android:maxLength="8"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:textSize="20sp"
+                            android:paddingEnd="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingLeft="8dp"
+                            android:paddingStart="8dp"
+                            android:textColorHint="@android:color/white"
+                            android:textColor="@android:color/white"
+                            android:hint="Satoshi amount"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/gap_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp" />
+
+                        <TextView
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            android:textSize="20sp"
+                            android:text="Min 1 500 000 Satoshi"
+                            android:textColor="@color/colorAccent"
+                            android:layout_marginTop="16dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+                        <EditText
+                            android:maxLength="40"
+                            android:id="@+id/walletText"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginStart="8dp"
+                            fontPath="fonts/Roboto-Light.ttf"
+                            android:textSize="20sp"
+                            android:paddingEnd="8dp"
+                            android:paddingRight="8dp"
+                            android:paddingLeft="8dp"
+                            android:paddingStart="8dp"
+                            android:textColorHint="@android:color/white"
+                            android:textColor="@android:color/white"
+                            android:hint="Bitcoin wallet"
+                            android:layout_marginTop="16dp"
+                            android:background="@drawable/gap_line"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="8dp"
+                            android:layout_height="48dp" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <Button
+                    fontPath="fonts/Roboto-Medium.ttf"
+                    android:layout_marginTop="32dp"
+                    android:elevation="8dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorBackground"
+                    android:text="REDEEM"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/button_main"
+                    android:id="@+id/redeem"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content" />
+
+                <android.support.v7.widget.CardView
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="8dp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    android:layout_marginTop="32dp"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:padding="12dp"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:textSize="16sp"
+                            android:text="1. Choose a currency to withdraw"
+                            android:textColor="@android:color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:text="2. Input amount of Satoshi"
+                            android:textColor="@android:color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:layout_marginTop="8dp"
+                            android:textSize="16sp"
+                            android:text="3. Press REDEEM button to withdraw your cryptocurrency"
+                            android:textColor="@android:color/white"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <include layout="@layout/banner" />
+    </LinearLayout>
+</FrameLayout>

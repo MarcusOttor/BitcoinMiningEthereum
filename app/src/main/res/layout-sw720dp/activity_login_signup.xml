@@ -1,0 +1,75 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="0.4"
+        android:elevation="8dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/wallet_light" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="17dp"
+                android:gravity="center"
+                android:text="Cryptocurrency\nmining"
+                android:textColor="@android:color/white"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/login"
+            android:textColor="@color/colorBackground"
+            android:textSize="18sp"
+            android:text="LOGIN"
+            android:elevation="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_main"
+            android:layout_width="200dp"
+            android:layout_height="48dp" />
+
+        <Button
+            android:id="@+id/signup"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:text="SIGNUP"
+            android:elevation="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/button_dark"
+            android:layout_width="200dp"
+            android:layout_height="48dp" />
+    </LinearLayout>
+</LinearLayout>
