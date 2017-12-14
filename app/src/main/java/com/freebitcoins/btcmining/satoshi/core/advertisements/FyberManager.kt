@@ -6,11 +6,13 @@ import android.widget.TextView
 import com.freebitcoins.btcmining.satoshi.core.analytics.Analytics
 import com.freebitcoins.btcmining.satoshi.core.managers.CoinsManager
 import com.freebitcoins.btcmining.satoshi.core.managers.PreferencesManager
+import com.freebitcoins.btcmining.satoshi.screens.OffersActivity
 import com.fyber.Fyber
 import com.fyber.ads.AdFormat
 import com.fyber.currency.VirtualCurrencyErrorResponse
 import com.fyber.currency.VirtualCurrencyResponse
 import com.fyber.requesters.*
+import kotlinx.android.synthetic.main.toolbar_main.*
 
 class FyberManager(
         private var coinsManager: CoinsManager,
@@ -20,7 +22,10 @@ class FyberManager(
     private var isAvailable = false
     private var offerWallIntent: Intent? = null
 
+    private var activity: AppCompatActivity? = null
+
     fun init(activity: AppCompatActivity) {
+        this.activity = activity
         Fyber.with(appId, activity)
                 .withSecurityToken(SecurityToken)
                 .start()
@@ -47,7 +52,13 @@ class FyberManager(
         override fun onSuccess(p0: VirtualCurrencyResponse?) {
             if (p0?.deltaOfCoins?.toInt() ?: 0 > 0) {
                 coinsManager.addCoins(p0?.deltaOfCoins?.toInt() ?: 0)
-                coinView.text = coinsManager.getCoins().toString()
+                try {
+                    coinView.text = coinsManager.getCoins().toString()
+                } catch (ex: Exception) {
+                    try {
+                        (activity as OffersActivity).coinsView.text = coinsManager.getCoins().toString()
+                    } catch (ex: Exception) {}
+                }
                 Analytics.report(Analytics.OFFER, Analytics.FYBER, Analytics.REWARD)
             }
         }
@@ -57,10 +68,12 @@ class FyberManager(
     }
 
     fun onResume(activity: AppCompatActivity) {
+        this.activity = activity
         VirtualCurrencyRequester.create(callback).request(activity)
     }
 
     fun show(activity: AppCompatActivity, coinsView: TextView): Boolean {
+        this.activity = activity
         this.coinView = coinsView
         if (isAvailable) activity.startActivity(offerWallIntent)
         Analytics.report(Analytics.OFFER, Analytics.FYBER, Analytics.OPEN)
