@@ -19,8 +19,8 @@ android {
         applicationId "com.freebitcoins.btcmining.satoshi"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 27
-        versionName "3.6"
+        versionCode 28
+        versionName "3.7"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         multiDexEnabled true
     }
